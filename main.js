@@ -77,152 +77,75 @@ class Question {
     }
 }
 
+let totalQueation = 1
+let rightAnswers = 0
+
+let card = new Question
+card.display()
+
 startBtn30.addEventListener('click', function () {
     start.style.display = 'none'
     container.style.display = 'flex'
-
-    let totalQueation = 1
-    let rightAnswers = 0
-
-    let card = new Question
-    card.display()
 
     setTimeout(function () {
         end.style.display = 'flex'
         container.style.display = 'none'
         massage.innerHTML = `You answered correctly ${rightAnswers} questions from ${totalQueation}`
     }, 30000)
-
-
-    for (let i = 0; i < answerBth.length; i += 1) { 
-        answerBth[i].addEventListener('click', function () { 
-            if (answerBth[i].innerHTML == card.correct) {
-                console.log('Правильно')
-                rightAnswers += 1
-                answerBth[i].style.background = '#068000'
-                anime({
-                    targets: answerBth[i],
-                    background: '#29E59A',
-                    duration: 500,
-                    delay: 100,
-                    easing: 'linear'
-            })
-            } else { 
-                console.log('Неправильно')
-                answerBth[i].style.background = '#800000'
-                anime({
-                    targets: answerBth[i],
-                    background: '#29E59A',
-                    duration: 500,
-                    delay: 100,
-                    easing: 'linear'
-            })
-            }
-
-            totalQueation += 1
-            card = new Question
-            card.display()
-        })
-    }
 })
 
 startBtn20.addEventListener('click', function () {
     start.style.display = 'none'
     container.style.display = 'flex'
 
-    let totalQueation = 1
-    let rightAnswers = 0
-
-    let card = new Question
-    card.display()
-
     setTimeout(function () {
         end.style.display = 'flex'
         container.style.display = 'none'
         massage.innerHTML = `You answered correctly ${rightAnswers} questions from ${totalQueation}`
     }, 20000)
-
-
-    for (let i = 0; i < answerBth.length; i += 1) { 
-        answerBth[i].addEventListener('click', function () { 
-            if (answerBth[i].innerHTML == card.correct) {
-                console.log('Правильно')
-                rightAnswers += 1
-                answerBth[i].style.background = '#068000'
-                anime({
-                    targets: answerBth[i],
-                    background: '#29E59A',
-                    duration: 500,
-                    delay: 100,
-                    easing: 'linear'
-            })
-            } else { 
-                console.log('Неправильно')
-                answerBth[i].style.background = '#800000'
-                anime({
-                    targets: answerBth[i],
-                    background: '#29E59A',
-                    duration: 500,
-                    delay: 100,
-                    easing: 'linear'
-            })
-            }
-
-            totalQueation += 1
-            card = new Question
-            card.display()
-        })
-    }
 })
 
 startBtn10.addEventListener('click', function () {
     start.style.display = 'none'
     container.style.display = 'flex'
 
-    let totalQueation = 1
-    let rightAnswers = 0
-
-    let card = new Question
-    card.display()
-
     setTimeout(function () {
         end.style.display = 'flex'
         container.style.display = 'none'
         massage.innerHTML = `You answered correctly ${rightAnswers} questions from ${totalQueation}`
     }, 10000)
-
-
-    for (let i = 0; i < answerBth.length; i += 1) { 
-        answerBth[i].addEventListener('click', function () { 
-            if (answerBth[i].innerHTML == card.correct) {
-                console.log('Правильно')
-                rightAnswers += 1
-                answerBth[i].style.background = '#068000'
-                anime({
-                    targets: answerBth[i],
-                    background: '#29E59A',
-                    duration: 500,
-                    delay: 100,
-                    easing: 'linear'
-            })
-            } else { 
-                console.log('Неправильно')
-                answerBth[i].style.background = '#800000'
-                anime({
-                    targets: answerBth[i],
-                    background: '#29E59A',
-                    duration: 500,
-                    delay: 100,
-                    easing: 'linear'
-            })
-            }
-
-            totalQueation += 1
-            card = new Question
-            card.display()
-        })
-    }
 })
+
+for (let i = 0; i < answerBth.length; i += 1) { 
+    answerBth[i].addEventListener('click', function () { 
+        if (answerBth[i].innerHTML == card.correct) {
+            console.log('Правильно')
+            rightAnswers += 1
+            answerBth[i].style.background = '#068000'
+            anime({
+                targets: answerBth[i],
+                background: '#29E59A',
+                duration: 500,
+                delay: 100,
+                easing: 'linear'
+        })
+        } else { 
+            console.log('Неправильно')
+            answerBth[i].style.background = '#800000'
+            anime({
+                targets: answerBth[i],
+                background: '#29E59A',
+                duration: 500,
+                delay: 100,
+                easing: 'linear'
+        })
+        }
+
+        totalQueation += 1
+        card = new Question
+        card.display()
+    })
+}
 
 sta.addEventListener('click', function () {
     start.style.display = 'flex'
